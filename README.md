@@ -119,6 +119,7 @@ Alerts/ Notifications bot for the smoke network.
 # To make it work
 Edit the bash script files to ensure they point to the correct folders.
 
+## Crontab
 Open Crontab and put in the below lines at the end
 
 `* * * * * python3.6 projects/herbie-smoke/Check_posts_for_mentions-v9.py`
@@ -129,13 +130,13 @@ Open Crontab and put in the below lines at the end
 
 `* * * * * python3.6 projects/herbie-smoke/Check_custom_json-v1.py`
 
-# process witness production alerts (virtual Ops)
+#### process witness production alerts (virtual Ops)
 `* * * * * python3.6 projects/herbie-smoke/Check_for_witness_blocksv2.py`
 
-# Daily production reports
+#### Daily production reports
 `2 1 * * * python3.6 projects/herbie-smoke/Create_daily_prod_report-v1.py`
 
-# These will only run the code if it's not already running
+#### These will only run the code if it's not already running
 `*/20 * * * * ./projects/herbie-smoke/Run_Stream_Operations.sh`
 
 `*/20 * * * * ./projects/herbie-smoke/Run_Stream_Virtual.sh`
